@@ -1,90 +1,146 @@
 <!DOCTYPE html>
+
 <html>
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Progate</title>
-  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
-  <link rel="stylesheet" type="text/css" href="stylesheet.css">
-</head>
-<body>
-  <header>
-    <div class="container">
-      <div class="header-left">
-        <img class="logo" src="https://prog-8.com/images/html/advanced/main_logo.png">
-      </div>
-      <span class="fa fa-bars menu-icon"></span>
-      <div class="header-right">
-        <a href="#">レッスン</a>
-        <a href="#">新規登録</a>
-        <a href="#" class="login">ログイン</a>
-      </div>
-    </div>
-  </header>
-  <div class="top-wrapper">
-    <div class="container">
-      <h1>LEARN TO CODE.<br>LEARN TO BE CREATIVE.</h1>
-      <p>Progateはオンラインプログラミング学習サービスです。<br>初心者にもやさしいスライドとレッスンで、ウェブサービスを作りながらプログラミングを学んでいきましょう。</p>
-      <div class="btn-wrapper">
-        <a href="#" class="btn signup">新規登録はこちら</a>
-        <p>or</p>
-        <a href="#" class="btn facebook"><span class="fa fa-facebook"></span>Facebookで登録</a>
-        <a href="#" class="btn twitter"><span class="fa fa-twitter"></span>Twitterで登録</a>
-      </div>
-    </div>
-  </div>
-  <div class="lesson-wrapper">
-    <div class="container">
-      <div class="heading">
-        <h2>Learn Where to Get Started!</h2>
-      </div>
-      <div class="lessons">
-        <div class="lesson">
-          <div class="lesson-icon">
-            <img src="https://prog-8.com/images/html/advanced/html.png">
-            <p>HTML & CSS</p>
-          </div>
-          <p class="text-contents">ウェブページの作成に使用される言語です。HTMLとCSSを組み合わせることで、静的なページを作り上げることができます。</p>
-        </div>
-        <div class="lesson">
-          <div class="lesson-icon">
-            <img src="https://prog-8.com/images/html/advanced/jQuery.png">
-            <p>jQuery</p>
-          </div>
-          <p class="text-contents">素敵な動きを手軽に実装できるJavaScriptライブラリです。 アニメーション効果をつけたり、Ajax（エイジャックス）を使って外部ファイルを読み込んだりと色々なことができます。</p>
-        </div>
-        <div class="lesson">
-          <div class="lesson-icon">
-            <img src="https://prog-8.com/images/html/advanced/ruby.png">
-            <p>Ruby</p>
-          </div>
-          <p class="text-contents">オープンソースの動的なプログラミング言語で、 シンプルさと高い生産性を備えています。大きなWebアプリケーションから小さな日用ツールまで、さまざまなソフトウェアを作ることができます。</p>
-        </div>
-        <div class="lesson">
-          <div class="lesson-icon">
-            <img src="https://prog-8.com/images/html/advanced/php.png">
-            <p>PHP</p>
-          </div>
-          <p class="text-contents">HTMLだけではページの内容を変えることはできません。PHPはHTMLにプログラムを埋め込み、それを可能にします。</p>
-        </div>
-      </div>
-      <div class="clear"></div>
-    </div>
-  </div>
-  <div class="message-wrapper">
-    <div class="container">
-      <div class="heading">
-        <h2>さぁ、あなたもProgateでプログラミングを学んでみませんか?</h2>
-        <h3>Let's learn to code, learn to be creative!</h3>
-      </div>
-      <span class="btn message">さっそく開発する</span>
-    </div>
-  </div>
-  <footer>
-    <div class="container">
-      <img src="https://prog-8.com/images/html/advanced/footer_logo.png">
-      <p>Learn to Code, Learn to be Creative.</p>
-    </div>
-  </footer>
-</body>
-</html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="theme-color" content="#000000">
+        <link rel="stylesheet" href="index.css">
+    </head>
+    <body>
+
+        <h1>じゃんけん大会</h1>
+        <h2>１０円入れてね</h2>
+
+        <script src="script.js"></script>
+      
+        <img class="picture"id="image_Place"src="pic_0.png">
+     
+        <a type="button"class="box3"id="gameStart"value="gameStart"onclick="rockPaperScissors()">GAME START</a>  
+      
+        <button type="button"class="box4"id="paper"value="paper"onclick="stop(this.value)">paper</button>  
+        <button type="button"class="box4"id="rock"value="rock"onclick="stop(this.value)">rock</button>  
+        <button type="button"class="box4"id="scissors"value="scissors"onclick="stop(this.value)">scissors</button>  
+     
+        <div class="box"id="logOne">N1</div>
+        <div class="box"id="logTwo">N2</div>
+        <div class="box"id="logThree">N3</div>
+        
+        <div class="box7"id="Result">Result</div>
+        <div class="box2"id="victoryOfDefeatOne">00</div>
+        <div class="box2"id="victoryOfDefeatTwo">00</div>
+        <div class="box2"id="victoryOfDefeatThree">00</div>
+    
+        <button type="button"class="box5"id="machineLoop"value="machineLoop"onclick="changeImg ()">machine Loop</button>
+        
+        <div class="box7"id="CT">CT</div>
+        <div class="box6"id="logTimeOne">00.00</div>
+        <div class="box6"id="logTimeTwo">00.00</div>
+        <div class="box6"id="logTimeThree">00.00</div>
+
+    </body>
+    
+    <script type="text/javascript">
+// 1行目に記載している 'use strict' は削除しないでください
+'use strict'
+
+console.log("--------------------------------------");
+console.log("HTML関係");
+console.log("--------------------------------------");
+
+const h1 = document.getElementsByTagName("h1")[0];
+h1.style.backgroundColor = "yellow";
+h1.style.color = "red";
+h1.style.textAlign = "center";
+const h2 = document.getElementsByTagName("h2")[0];
+h2.style.textAlign = "center";
+
+console.log("--------------------------------------");
+console.log("rockPaperScissors");
+console.log("--------------------------------------");
+
+let yourChoice = "";
+let stopNumber = -1;
+console.log("FirstCondition: " + stopNumber);
+
+function stop(youValue) {
+    yourChoice = youValue;
+    stopNumber = 0;
+    console.log("yourChoice: " + yourChoice, "stopNumber: " + stopNumber);
+    return yourChoice, stopNumber;
+}
+
+let count = 0;
+
+function rockPaperScissors() {
+    const t0 = performance.now();
+    let machine = " ";
+    let victoryOfDefeat = " ";
+    let t2 = 0;
+    const result = document.getElementsByClassName("box2");
+    const cycleTime = document.getElementsByClassName("box6");
+    machine = randam();
+    if (typeof machine === "string") {
+        if (yourChoice === machine) {
+            victoryOfDefeat = "rockPaperScissors";
+        } else if (yourChoice === "paper" && machine === "rock" || yourChoice === "rock" && machine === "scissors" || yourChoice === "scissors" && machine === "paper") {
+            victoryOfDefeat = "YOU WIN !";
+        } else {
+            victoryOfDefeat = "YOU LOSE!";
+        }
+    } else {
+        victoryOfDefeat = "Wrong Procedure.";
+    }
+    stopNumber = -1;
+    const t1 = performance.now();
+    t2 = t1 - t0;
+    console.log("yourChoice: " + yourChoice + " machine: " + machine + " " + victoryOfDefeat + " " + "stopNumber: " + stopNumber);
+    console.log("count befor if: ", count);
+    if (count < 3) {
+        result[count].innerText = victoryOfDefeat;
+        cycleTime[count].innerText = t2.toFixed(2);
+        count += 1;
+        console.log("call to :" + t2 + "millisseconds");
+        console.log("count after if: ", count);
+    } else if (count === 3) {
+        count = 0;
+        console.log("count reset: ", count);
+        console.log("call to reset: " + t2 + "millisseconds");
+        result[count].innerText = victoryOfDefeat;
+        cycleTime[count].innerText = t2.toFixed(2);
+        count += 1;
+    } else {
+        console.log("WHY");
+    }
+    return alert(victoryOfDefeat);
+}
+
+function randam() {
+    let stopNumberTwo = -1;
+    stopNumberTwo = stopNumber;
+    let comment = [1234, "paper", "rock", "scissors"]
+    if (h < 4) {
+        console.log("stopNumberTwo: ", stopNumberTwo);
+        if (stopNumberTwo === 0) {
+            // choice(h);
+            return comment[h];
+        }
+    }
+}
+
+let h = 0;
+let i = 0;
+
+function changeImg() {
+    if (i === 4) {
+        h = 0;
+        i = 0;
+    }
+    h++;
+    console.log(h);
+    let img = document.getElementById("image_Place");
+    img.src = "pic_" + h + ".png";
+    console.log(img);
+    i = h + 1;
+}
+    </script>
